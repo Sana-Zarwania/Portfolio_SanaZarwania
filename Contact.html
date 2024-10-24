@@ -66,32 +66,25 @@ nav ul li a {
 nav ul li a:hover {
     color: #51ac3d; /* Hover effect */
 }
-
 @media (max-width: 768px) {
     nav {
-        height: 80px; /* Reduced height for smaller screens */
-        padding: 0 15px; /* Less padding to match the smaller height */
-    }
-    nav .left {
-        font-size: 1.8rem; /* Adjusted size of "Contact"for smaller screens */
-        display: flex; 
-        justify-content: center; /* Centers horizontally */
-        align-items: center; /* Centers vertically */
-        height: 60px; /* Make sure it fills the height of the nav bar */
-        width: 100%; /* Ensure it spans the entire screen width */
-        text-align: center; /* Optional: Ensure text is centered */
+        justify-content: center;
     }
 
-    nav ul {
+    nav.left {
+        font-size: 1.8rem; /* Reduce the size of text "Contact" to 1.8 rem on mobile phones*/
+    }
+        nav ul {
         display: none; /* Hidden initially */
         flex-direction: column; /* Stack items vertically */
-        position: fixed;
+        position: absolute;
         top: 80px;
         left: 0;
-        width: 50%; /* /* Half width of page  */
-        background-color: #54917c; /* Mobile background color */
+        width: 50%; /* Half width of page */
+        background-color:#54917c; /* Mobile background color */
         align-items: flex-start; /* Aligns items to the left */
         padding-left: 20px; /* Add padding for spacing from the left */
+        z-index: 1000; /* Ensure it overlays content */
     }
 
     nav ul.active {
@@ -100,12 +93,16 @@ nav ul li a:hover {
 
     .menu-icon {
         display: block;
+        position: absolute;
+        left: 10px;
+
     }
 
     nav ul li {
         margin: 10px 0;
     }
 }
+
         .contact-container {
             background-color: rgba(255, 255, 255, 0.95);
             border-radius: 10px;

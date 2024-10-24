@@ -19,7 +19,9 @@
         html, body {
             overflow-x: hidden;
             width: 100%;
-            background-color: #0f463f;
+            background-color: white;
+            font-family: 'Poppins', 'Times New Roman', Times, serif;
+        
         }
 
         /* Header Styles */
@@ -40,14 +42,13 @@
         }
 
         nav .left {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: white;
         }
 
         nav ul {
             display: flex;
             align-items: center;
-
         }
 
         nav ul li {
@@ -68,9 +69,11 @@
         /* Intro Section Styles */
         .intro-section {
             display: flex;
-            height: calc(100vh - 80px); 
+            flex-wrap: wrap;
+            height: calc(100vh - 80px);
             padding: 20px;
             gap: 10px;
+            align-items: center;
         }
 
         .intro-text, .env-img {
@@ -81,19 +84,15 @@
             align-items: center;
         }
 
-        .intro-text {
-            padding-left: 30px; 
-        }
-
         .intro-text h1 {
-            color: white;
-            font-size: 1.6rem;
+            color: #157A6E;
+            font-size: 2rem;
             text-align: center;
             margin-bottom: 10px;
         }
 
         .intro-text p {
-            color: white;
+            color: #333;
             font-size: 1.2rem;
             line-height: 1.6;
             margin: 15px 0;
@@ -109,23 +108,11 @@
             margin: 20px auto;
             padding: 10px 20px;
             font-style: italic;
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.4);
+            color: #157A6E;
+            background-color: rgba(0, 0, 0, 0.05);
             border-left: 4px solid #51ac3d;
             max-width: 600px;
             text-align: center;
-        }
-
-        blockquote.quote p {
-            margin-bottom: 5px;
-            font-size: 1.2rem;
-        }
-
-        blockquote.quote span {
-            display: block;
-            margin-top: 5px;
-            font-size: 1rem;
-            color: #cee7e6;
         }
 
         .button {
@@ -164,7 +151,7 @@
         .testimonial {
             margin: 20px auto;
             max-width: 600px;
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 10px;
             font-style: italic;
@@ -179,46 +166,54 @@
 
         @media (max-width: 768px) {
             nav {
-        justify-content: center;
-    }
-
-            nav.left {
-                font-size: 1.8rem; /* Reduce the size of text "Contact" to 1.8 rem on mobile phones*/
-            }
-            .intro-section {
-                flex-direction: column;
-                gap: 15px;
+                justify-content: center;
             }
 
-            .intro-text {
-                padding-left: 15px;
-                text-align: center;
+            .menu-icon {
+                display: block;
+                position: absolute;
+                left: 10px;
             }
+
             nav ul {
-        display: none; /* Hidden initially */
-        flex-direction: column; /* Stack items vertically */
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 50%; /* Half width of page */
-        background-color:#54917c; /* Mobile background color */
-        align-items: flex-start; /* Aligns items to the left */
-        padding-left: 20px; /* Add padding for spacing from the left */
-        z-index: 1000; /* Ensure it overlays content */
-    }
-
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: #54917c;
+                z-index: 1000;
+                align-items: center;
+            }
 
             nav ul.active {
                 display: flex;
             }
-            .menu-icon {
-        display: block;
-        position: absolute;
-        left: 10px;
 
-    }
             nav ul li {
                 margin: 10px 0;
+            }
+
+            .intro-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .env-img img {
+                max-width: 80%;
+            }
+
+            .testimonials {
+                padding: 30px 10px;
+            }
+
+            .testimonials h2 {
+                font-size: 1.5rem;
+            }
+
+            .testimonial {
+                max-width: 90%;
             }
         }
 
@@ -267,7 +262,7 @@
             <h1>Welcome to My Portfolio!</h1>
             <p>
                 I am Sana Zarwania, an <span style="color: #51ac3d;">environmental scientist</span> passionate about addressing real-world environmental challenges.
-                With expertise in <span style="color: #51ac3d;">Geographic Information Systems (GIS)</span>, I am committed to solution-oriented research that seeks to develop innovative strategies for sustainable development.
+                With expertise in <span style="color: #51ac3d;">Geographic Information Systems (GIS)</span>, I am committed to solution-oriented research for sustainable development.
             </p>
             <blockquote class="quote">
                 <p>"The notion that the earth is our mother, and that we are responsible for caring for her, is the key to a sustainable future."</p>
