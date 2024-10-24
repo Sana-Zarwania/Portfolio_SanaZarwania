@@ -36,7 +36,7 @@
 
 .menu-icon {
     display: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: white;
     cursor: pointer;
 }
@@ -49,6 +49,7 @@ nav .left {
 nav ul {
     display: flex;
     align-items: center;
+    z-index: 1000; /* Ensure it overlays content */
 }
 
 nav ul li {
@@ -67,14 +68,30 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
+    nav {
+        height: 80px; /* Reduced height for smaller screens */
+        padding: 0 15px; /* Less padding to match the smaller height */
+    }
+    nav .left {
+        font-size: 1.8rem; /* Adjusted size of "Contact"for smaller screens */
+        display: flex; 
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+        height: 60px; /* Make sure it fills the height of the nav bar */
+        width: 100%; /* Ensure it spans the entire screen width */
+        text-align: center; /* Optional: Ensure text is centered */
+    }
+
     nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
+        display: none; /* Hidden initially */
+        flex-direction: column; /* Stack items vertically */
+        position: fixed;
         top: 80px;
         left: 0;
-        width: 100%;
-        background-color: #77B28C; /* Mobile background color */
+        width: 50%; /* /* Half width of page  */
+        background-color: #54917c; /* Mobile background color */
+        align-items: flex-start; /* Aligns items to the left */
+        padding-left: 20px; /* Add padding for spacing from the left */
     }
 
     nav ul.active {

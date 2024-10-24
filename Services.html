@@ -9,25 +9,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
-         /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', 'Times New Roman', Times, serif;
-        }
-        body {
+         
+
+        /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+}
+
+body {
     margin: 0;
     padding: 0;
     background-color: #e9f5f0;
     color: #2f4858;
     line-height: 1.8;
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
-  /* Header Styles */
 
-  header {
-    margin-bottom: 40px; /* Adjust this value as needed */
-  }
+/* Header Styles */
+header {
+    margin-bottom: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow under header */
+}
 
 nav {
     display: flex;
@@ -36,17 +41,19 @@ nav {
     height: 80px;
     background-color: #157A6E;
     padding: 0 20px;
-    width: 100%;  /* Ensure full width */
-    max-width: 100vw; /* Prevent overflow beyond the viewport */
+    width: 100%;
+    max-width: 100vw;
+    transition: background-color 0.3s ease-in-out; /* Smooth background change */
 }
+
 
 .menu-icon {
     display: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: white;
     cursor: pointer;
 }
-
+   
 nav .left {
     font-size: 2.5rem;
     color: white;
@@ -55,6 +62,7 @@ nav .left {
 nav ul {
     display: flex;
     align-items: center;
+    transition: all 0.3s ease-in-out; /* Smooth menu appearance */
 }
 
 nav ul li {
@@ -66,21 +74,37 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease; /* Smooth color change on hover */
 }
 
 nav ul li a:hover {
-    color: #51ac3d; /* Hover effect */
+    color: #51ac3d;
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
+    nav {
+        justify-content: center;
+    }
+
+    
+    nav .left {
+        font-size: 1.8rem; /* Adjusted size of "Contact"for smaller screens */
+        justify-content: center; /* Center the entire content */
+       
+    }
     nav ul {
-        display: none;
-        flex-direction: column;
+        display: none; /* Hidden initially */
+        flex-direction: column; /* Stack items vertically */
         position: absolute;
         top: 80px;
         left: 0;
-        width: 100%;
-        background-color: #77B28C; /* Mobile background color */
+        width: 50%; /* /* Half width of page */
+        background-color:#54917c; /* Mobile background color */
+        align-items: flex-start; /* Aligns items to the left */
+        padding-left: 20px; /* Add padding for spacing from the left */
+        z-index: 1000; /* Ensure it overlays content */
     }
 
     nav ul.active {
@@ -89,79 +113,93 @@ nav ul li a:hover {
 
     .menu-icon {
         display: block;
+        position: absolute;
+        left: 10px;
+    
     }
 
     nav ul li {
         margin: 10px 0;
+
     }
 }
 
-        .services-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            max-width: 1200px;
+/* Service Cards */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-            margin: 0 auto;
-        }
+.service {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #157A6E;
+}
 
-        .service {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            width: 300px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f0fcfa;
+}
 
-        .service:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
+.service h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #2a7b6f;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
 
-        .service h2 {
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-            color: #2a7b6f;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+.service h2:hover {
+    color: #157A6E;
+}
 
-        .service p {
-            font-size: 0.9rem;
-            line-height: 1.6;
-            color: #555;
-        }
+.service p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+}
 
-    
-        footer {
-            background-color: #CEE7E6;
-            color: #157A6E; /* Changed from previous color */
-            padding: 20px 0;
-            margin-top: 40px;
-            text-align: center;
-            width: 100%;
-        }
+/* Footer */
+footer {
+    background-color: #CEE7E6;
+    color: #157A6E;
+    padding: 20px 0;
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+    border-top: 2px solid #14a392;
+}
 
-        footer p {
-            margin: 5px 0;
-            font-size: 0.8rem;
-        }
+footer p {
+    margin: 5px 0;
+    font-size: 0.8rem;
+}
 
-        footer .social-icons a {
-            margin: 0 10px;
-            color: #157A6E; /* Keeping the color for social icons */
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
+footer .social-icons a {
+    margin: 0 10px;
+    color: #157A6E;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-        footer .social-icons a:hover {
-            color: #0f463f; /* Keeping the hover color for social icons */
-        }
+footer .social-icons a:hover {
+    color: #0f463f;
+}
+
         
     </style>
 </head>

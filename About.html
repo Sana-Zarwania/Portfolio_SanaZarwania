@@ -37,7 +37,7 @@
 
 .menu-icon {
     display: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: white;
     cursor: pointer;
 }
@@ -68,14 +68,24 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
+    nav {
+        justify-content: center;
+    }
+
+    nav.left {
+        font-size: 1.8rem; /* Reduce the size of text "Contact" to 1.8 rem on mobile phones*/
+    }
+        nav ul {
+        display: none; /* Hidden initially */
+        flex-direction: column; /* Stack items vertically */
         position: absolute;
         top: 80px;
         left: 0;
-        width: 100%;
-        background-color: #77B28C; /* Mobile background color */
+        width: 50%; /* Half width of page */
+        background-color:#54917c; /* Mobile background color */
+        align-items: flex-start; /* Aligns items to the left */
+        padding-left: 20px; /* Add padding for spacing from the left */
+        z-index: 1000; /* Ensure it overlays content */
     }
 
     nav ul.active {
@@ -84,6 +94,9 @@ nav ul li a:hover {
 
     .menu-icon {
         display: block;
+        position: absolute;
+        left: 10px;
+
     }
 
     nav ul li {
