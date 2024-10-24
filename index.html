@@ -21,7 +21,6 @@
             width: 100%;
             background-color: white;
             font-family: 'Poppins', 'Times New Roman', Times, serif;
-        
         }
 
         /* Header Styles */
@@ -70,9 +69,10 @@
         .intro-section {
             display: flex;
             flex-wrap: wrap;
-            height: calc(100vh - 80px);
-            padding: 20px;
-            gap: 10px;
+            height: auto;
+            min-height: calc(100vh - 80px);
+            padding: 40px 20px; /* Increased padding for spacing */
+            gap: 20px;
             align-items: center;
         }
 
@@ -117,6 +117,10 @@
 
         .button {
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -137,7 +141,7 @@
 
         /* Testimonials Section */
         .testimonials {
-            padding: 50px 20px;
+            padding: 60px 20px; /* Increased padding for space */
             background-color: #157A6E;
             color: white;
             text-align: center;
@@ -145,7 +149,7 @@
 
         .testimonials h2 {
             font-size: 2rem;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .testimonial {
@@ -164,6 +168,32 @@
             color: #cee7e6;
         }
 
+        /* Footer Styles */
+        footer {
+            background-color: #CEE7E6;
+            color: #157A6E;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 0.8rem;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            color: #157A6E;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        footer .social-icons a:hover {
+            color: #0f463f;
+        }
+
+        /* Media Queries */
         @media (max-width: 768px) {
             nav {
                 justify-content: center;
@@ -197,7 +227,7 @@
 
             .intro-section {
                 flex-direction: column;
-                text-align: center;
+                padding: 20px;
             }
 
             .env-img img {
@@ -205,7 +235,7 @@
             }
 
             .testimonials {
-                padding: 30px 10px;
+                padding: 40px 10px;
             }
 
             .testimonials h2 {
@@ -215,30 +245,10 @@
             .testimonial {
                 max-width: 90%;
             }
-        }
 
-        footer {
-            background-color: #CEE7E6;
-            color: #157A6E;
-            padding: 20px 0;
-            text-align: center;
-            width: 100%;
-        }
-
-        footer p {
-            margin: 5px 0;
-            font-size: 0.8rem;
-        }
-
-        footer .social-icons a {
-            margin: 0 10px;
-            color: #157A6E;
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
-
-        footer .social-icons a:hover {
-            color: #0f463f;
+            .button {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -259,20 +269,23 @@
 
     <section class="intro-section" id="home">
         <div class="intro-text">
-            <h1>Welcome to My Portfolio!</h1>
+            <h1>Hi there!</h1>
             <p>
-                I am Sana Zarwania, an <span style="color: #51ac3d;">environmental scientist</span> passionate about addressing real-world environmental challenges.
-                With expertise in <span style="color: #51ac3d;">Geographic Information Systems (GIS)</span>, I am committed to solution-oriented research for sustainable development.
+                I am <b>Sana Zarwania</b>, an <b>environmental scientist</b> passionate about addressing real-world environmental challenges.  
+                With expertise in <b>Geographic Information Systems (GIS)</b>, I am passionate about conducting solution-oriented research that drives sustainable development.
             </p>
+
             <blockquote class="quote">
                 <p>"The notion that the earth is our mother, and that we are responsible for caring for her, is the key to a sustainable future."</p>
                 <span>– Rachel Carson</span>
             </blockquote>
+
             <div class="button">
                 <a href="Academic_CV_2024.pdf" class="btn" download>Download Resume</a>
                 <a href="https://www.linkedin.com/in/sana-zarwania-9a5429192" class="btn" target="_blank" rel="noopener noreferrer">Visit LinkedIn</a>
             </div>
         </div>
+
         <div class="env-img">
             <img src="Environmentalist_2.png" alt="Environmentalist Image">
         </div>
@@ -310,3 +323,5 @@
     </script>
 </body>
 </html>
+
+           
