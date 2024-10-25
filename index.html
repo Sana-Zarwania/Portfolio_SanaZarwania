@@ -96,7 +96,7 @@
             font-size: 1.2rem;
             line-height: 1.6;
             margin: 15px 0;
-            text-align: justify;
+            text-align: center;
         }
 
         .env-img img {
@@ -133,6 +133,7 @@
     transition: background-color 0.3s;
     text-decoration: none; /* Remove underline */
     display: inline-block; /* Ensure it's treated as a block-like element */
+    text-align: center;
 }
 
 .btn:hover {
@@ -200,6 +201,9 @@
                 justify-content: center;
                 height: 60px ;
             }
+            nav.left {
+        font-size: 2rem; /* Reduce the size of text "Contact" to 2rem on mobile phones*/
+    }
 
             .menu-icon {
                 display: block;
@@ -213,8 +217,8 @@
         position: absolute;
         top: 60px; /* Start right below the navbar */
         left: 0;
-        width: 70%; /* Full width */
-        height: 70vh;
+        width: 60%; 
+        height: 60vh;
         background-color: #54917c; /* Mobile background color */
         align-items: flex-start; /* Align items to the left */
         padding-left: 20px; /* Add padding from the left */
@@ -282,8 +286,8 @@
         <div class="intro-text">
             <h1>Hi there!</h1>
             <p>
-                I am <b>Sana Zarwania</b>, an <b>environmental scientist</b> passionate about addressing real-world environmental challenges.  
-                With expertise in <b>Geographic Information Systems (GIS)</b>, I am passionate about conducting solution-oriented research that drives sustainable development.
+                I am Sana Zarwania, an environmental scientist passionate about addressing real-world environmental challenges.  
+                With expertise in Geographic Information Systems (GIS), I am passionate about conducting solution-oriented research that drives sustainable development.
             </p>
 
             <blockquote class="quote">
@@ -325,13 +329,29 @@
     </footer>
 
     <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+
+    menuIcon.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevents click from propagating to the body
+        navLinks.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+        }
+    });
+</script>
+
+<!--         
         const menuIcon = document.getElementById('menu-icon');
         const navLinks = document.getElementById('nav-links');
 
         menuIcon.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
-    </script>
+    </script> -->
 </body>
 </html>
 

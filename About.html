@@ -70,10 +70,11 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     nav {
         justify-content: center;
+        height: 60px ;
     }
 
     nav.left {
-        font-size: 1.8rem; /* Reduce the size of text "Contact" to 1.8 rem on mobile phones*/
+        font-size: 2rem; /* Reduce the size of text "Contact" to 2rem on mobile phones*/
     }
         nav ul {
         display: none; /* Hidden initially */
@@ -81,7 +82,8 @@ nav ul li a:hover {
         position: absolute;
         top: 80px;
         left: 0;
-        width: 70%; /* More than Half width of page */
+        width: 60%; 
+        height: 60vh;
         background-color:#54917c; /* Mobile background color */
         align-items: flex-start; /* Aligns items to the left */
         padding-left: 20px; /* Add padding for spacing from the left */
@@ -97,12 +99,10 @@ nav ul li a:hover {
         position: absolute;
         left: 10px;
         font-size: 1.5rem;
-
     }
-
     nav ul li {
-        margin: 10px 0;
-    }
+                margin: 20px 0;
+            }
 }
       
         /* Main Section */
@@ -331,10 +331,26 @@ nav ul li a:hover {
     const menuIcon = document.getElementById('menu-icon');
     const navLinks = document.getElementById('nav-links');
 
+    menuIcon.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevents click from propagating to the body
+        navLinks.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+        }
+    });
+</script>
+<!-- 
+<script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+
     menuIcon.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
-</script>
+</script> -->
 
 
 </body>
