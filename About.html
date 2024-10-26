@@ -33,6 +33,7 @@
     height: 80px;
     background-color: #157A6E; /* Changed from #4CAF50 to #157A6E */
     padding: 0 20px;
+    position: relative; /* Add relative positioning */
 }
 
 .menu-icon {
@@ -64,7 +65,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #51ac3d; /* Hover effect */
+    color: #33f708; /* Hover effect */
 }
 
 @media (max-width: 768px) {
@@ -80,7 +81,7 @@ nav ul li a:hover {
         display: none; /* Hidden initially */
         flex-direction: column; /* Stack items vertically */
         position: absolute;
-        top: 80px;
+        top: 60px;/* Adjusted to match nav height */
         left: 0;
         width: 60%; 
         height: 60vh;
@@ -182,7 +183,7 @@ nav ul li a:hover {
         }
 
         .degree-info {
-            color: #2f4858;
+            color:#ac630f ;
             margin-bottom: 10px;
             font-size: 1rem;
             font-weight: 600;
@@ -196,13 +197,31 @@ nav ul li a:hover {
         }
 
         .university-name a:hover {
-            color: #1c5d56;
+            color: #ac630f ;
         }
+        /* Major Courses Section */
+.major-courses ul {
+    list-style: square inside;  /* Ensures the bullets and text align properly */
+    margin-top: 10px;
+    padding-left: 0;  /* Ensures no additional indentation */
+}
 
-        .major-courses ul {
+.major-courses ul li {
+    margin-bottom: 8px;
+    text-indent: -1em;  /* Moves text slightly left to align with the bullets */
+    padding-left: 1em;  /* Shifts text to avoid overlapping with bullet */
+}
+
+/* Change Bullet Color */
+.major-courses ul li::marker {
+    color:  #ac630f; /* Change to your preferred color */
+    font-size: 1.2em; /* Optional: Adjust bullet size */
+}
+
+        /* .major-courses ul {
             list-style: square inside;
             margin-top: 10px;
-        }
+        } */
         /* Responsive Design */
         @media (max-width: 768px) {
             .education-section {

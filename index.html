@@ -60,10 +60,11 @@
             color: white;
             font-size: 1rem;
         }
-
         nav ul li a:hover {
-            color: #51ac3d;
-        }
+    color: #33f708; /* Hover effect */
+}
+
+    
 
         /* Intro Section Styles */
         .intro-section {
@@ -85,7 +86,7 @@
         }
 
         .intro-text h1 {
-            color: #157A6E;
+            color: #ac630f;
             font-size: 2rem;
             text-align: center;
             margin-bottom: 10px;
@@ -113,6 +114,9 @@
             border-left: 4px solid  #135e55;
             max-width: 600px;
             text-align: center;
+        }
+        .quoteAuthor {
+            color:#ac630f;
         }
 
         .button {
@@ -219,7 +223,8 @@
         left: 0;
         width: 60%; 
         height: 60vh;
-        background-color: #54917c; /* Mobile background color */
+        background-color: #acd4c7; /* Mobile background color */
+        color: #3333;
         align-items: flex-start; /* Align items to the left */
         padding-left: 20px; /* Add padding from the left */
         z-index: 1000; /* Ensure it overlays other content */
@@ -273,11 +278,11 @@
             <i class="fa-solid fa-bars menu-icon" id="menu-icon"></i>
             <div class="left">Sana Zarwania</div>
             <ul id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Experience.html">Experience</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="index.html" target="_blank" rel="noopener noreferrer">Home</a></li>
+                <li><a href="About.html" target="_blank" rel="noopener noreferrer">About</a></li>
+                <li><a href="Experience.html" target="_blank" rel="noopener noreferrer">Experience</a></li>
+                <li><a href="Services.html" target="_blank" rel="noopener noreferrer">Services</a></li>
+                <li><a href="Contact.html" target="_blank" rel="noopener noreferrer">Contact</a></li> 
             </ul>
         </nav>
     </header>
@@ -292,7 +297,8 @@
 
             <blockquote class="quote">
                 <p>"The notion that the earth is our mother, and that we are responsible for caring for her, is the key to a sustainable future."</p>
-                <span>– Rachel Carson</span>
+                <span class="quoteAuthor" style="font-weight: bold;">– Rachel Carson</span>
+           
             </blockquote>
 
             <div class="button">
