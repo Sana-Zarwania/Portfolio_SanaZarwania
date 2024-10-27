@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,96 +20,113 @@
         }
 
         body {
-            background-color: #e9f5f0; /* Very light green */
-            color: #2f4858; /* Cool blue */
+            background-color: #e9f5f0;
+            /* Very light green */
+            color: #2f4858;
+            /* Cool blue */
             line-height: 1.8;
         }
 
-         /* Header Styles */
+        /* Header Styles */
 
         nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    background-color: #157A6E; /* Changed from #4CAF50 to #157A6E */
-    padding: 0 20px;
-    position: relative; /* Add relative positioning */
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            background-color: #157A6E;
+            /* Changed from #4CAF50 to #157A6E */
+            padding: 0 20px;
+            position: relative;
+            /* Add relative positioning */
+        }
 
-.menu-icon {
-    display: none;
-    font-size: 1.8rem;
-    color: white;
-    cursor: pointer;
-}
+        .menu-icon {
+            display: none;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+        }
 
-nav .left {
-    font-size: 2.5rem;
-    color: white;
-}
+        nav .left {
+            font-size: 2.5rem;
+            color: white;
+        }
 
-nav ul {
-    display: flex;
-    align-items: center;
-}
-
-nav ul li {
-    list-style: none;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-}
-
-nav ul li a:hover {
-    color: #33f708; /* Hover effect */
-}
-
-@media (max-width: 768px) {
-    nav {
-        justify-content: center;
-        height: 60px ;
-    }
-
-    nav.left {
-        font-size: 2rem; /* Reduce the size of text "Contact" to 2rem on mobile phones*/
-    }
         nav ul {
-        display: none; /* Hidden initially */
-        flex-direction: column; /* Stack items vertically */
-        position: absolute;
-        top: 60px;/* Adjusted to match nav height */
-        left: 0;
-        width: 50%; 
-        height: 50vh;
-        gap: 15px;
-        background-color: #4e917c; /* Mobile background color */
-        color:white;
-        align-items: flex-start; /* Aligns items to the left */
-        padding-left: 20px; /* Add padding for spacing from the left */
-        z-index: 1000; /* Ensure it overlays content */
-    }
+            display: flex;
+            align-items: center;
+        }
 
-    nav ul.active {
-        display: flex;
-    }
+        nav ul li {
+            list-style: none;
+            margin: 0 20px;
+        }
 
-    .menu-icon {
-        display: block;
-        position: absolute;
-        left: 10px;
-        font-size: 1.5rem;
-    }
-    nav ul li {
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            color: #33f708;
+            /* Hover effect */
+        }
+
+         /* Media Querries-Responsive design */
+
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center;
+                height: 60px;
+            }
+
+            nav.left {
+                font-size: 2rem;
+                /* Reduce the size of text "Contact" to 2rem on mobile phones*/
+            }
+
+            nav ul {
+                display: none;
+                /* Hidden initially */
+                flex-direction: column;
+                /* Stack items vertically */
+                position: absolute;
+                top: 60px;
+                /* Adjusted to match nav height */
+                left: 0;
+                width: 50%;
+                height: 50vh;
+                gap: 15px;
+                background-color: #4e917c;
+                /* Mobile background color */
+                color: white;
+                align-items: flex-start;
+                /* Aligns items to the left */
+                padding-left: 20px;
+                /* Add padding for spacing from the left */
+                z-index: 1000;
+                /* Ensure it overlays content */
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+                position: absolute;
+                left: 10px;
+                font-size: 1.5rem;
+            }
+
+            nav ul li {
                 margin: 10px 0;
             }
-}
-      
-        /* Main Section */
+        }
+
+        /* Main Section styles */
         main {
             max-width: 900px;
             margin: 50px auto;
@@ -119,12 +137,14 @@ nav ul li a:hover {
             animation: fadeIn 1s ease-out;
         }
 
-        /* Section Animation */
+        /* Section Animation styles */
+
         @keyframes fadeIn {
             0% {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             100% {
                 opacity: 1;
                 transform: translateY(0);
@@ -140,6 +160,7 @@ nav ul li a:hover {
             display: inline-block;
             padding-bottom: 8px;
         }
+
         h2 p {
             text-align: justify;
         }
@@ -149,28 +170,30 @@ nav ul li a:hover {
             margin: 20px 0;
         }
 
-        /* Education Section */
+        /* Education Section style */
+
         .education-section {
             display: flex;
             justify-content: space-between;
             margin-bottom: 30px;
             padding: 20px 0;
-            
+
         }
 
-        .university-info, .major-courses {
+        .university-info,
+        .major-courses {
             width: 48%;
             text-align: center;
-           
+
         }
+
         .major-courses {
             width: 48%;
             text-align: left;
-            transform: translateY(30px); /* Adjusts the downward position */
+            transform: translateY(30px);
+            /* Adjusts the downward position */
 
         }
-      
-
 
         .university-info img {
             width: 100%;
@@ -185,7 +208,7 @@ nav ul li a:hover {
         }
 
         .degree-info {
-            color:#ac630f ;
+            color: brown;
             margin-bottom: 10px;
             font-size: 1rem;
             font-weight: 600;
@@ -199,28 +222,41 @@ nav ul li a:hover {
         }
 
         .university-name a:hover {
-            color: #ac630f ;
+            color: brown;
         }
+
         /* Major Courses Section */
+
         .major-courses ul {
-    list-style-position: outside;  /* Bullets stay outside the text area */
-    padding-left: 1.2em;           /* Creates space for the bullet */
-}
+            list-style-position: inside;
+            /* Bullets stay outside the text area */
+            padding-left: 1.2em;
+            /* Creates space for the bullet */
+            list-style-type: square;
+        }
 
-.major-courses ul li {
-    margin-bottom: 8px;
-    padding-left: 0.5em;            /* Shifts text to align with bullet */
-    text-indent: -0.5em;            /* Ensures that the second line aligns with the text */
-    line-height: 1.6;               /* Adjusts line spacing for better readability */
-    word-wrap: break-word;          /* Ensures long words break */
-}
+        .major-courses ul li {
+            margin-bottom: 8px;
+            padding-left: 0.5em;
+            /* Shifts text to align with bullet */
+            text-indent: -0.5em;
+            /* Ensures that the second line aligns with the text */
+            line-height: 1.6;
+            /* Adjusts line spacing for better readability */
+            word-wrap: break-word;
+            /* Ensures long words break */
+            overflow-wrap: anywhere;
+            /* Handles overflow for long URLs or words */
+        }
 
+        /* Bullet style */
 
-/* Change Bullet Color */
-.major-courses ul li::marker {
-    color:  #ac630f; /* Change to your preferred color */
-    font-size: 1.2em; /* Optional: Adjust bullet size */
-}
+        .major-courses ul li::marker {
+            color: brown;
+            /* Change to your preferred color */
+            font-size: 1.2em;
+            /* Optional: Adjust bullet size */
+        }
 
 
         /* Responsive Design */
@@ -232,14 +268,18 @@ nav ul li a:hover {
             }
 
 
-            .university-info, .major-courses {
+            .university-info,
+            .major-courses {
                 width: 100%;
             }
         }
 
+         /* Footer Style */
+
         footer {
             background-color: #CEE7E6;
-            color: #157A6E; /* Changed from previous color */
+            color: #157A6E;
+            /* Changed from previous color */
             padding: 20px 0;
             text-align: center;
             width: 100%;
@@ -252,16 +292,19 @@ nav ul li a:hover {
 
         footer .social-icons a {
             margin: 0 10px;
-            color: #157A6E; /* Keeping the color for social icons */
+            color: #157A6E;
+            /* Keeping the color for social icons */
             font-size: 1.5rem;
             text-decoration: none;
         }
 
         footer .social-icons a:hover {
-            color: #0f463f; /* Keeping the hover color for social icons */
+            color: #0f463f;
+            /* Keeping the hover color for social icons */
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -273,92 +316,97 @@ nav ul li a:hover {
                 <li><a href="About.html" target="_blank" rel="noopener noreferrer">About</a></li>
                 <li><a href="Experience.html" target="_blank" rel="noopener noreferrer">Experience</a></li>
                 <li><a href="Services.html" target="_blank" rel="noopener noreferrer">Services</a></li>
-                <li><a href="Contact.html" target="_blank" rel="noopener noreferrer">Contact</a></li>  
+                <li><a href="Contact.html" target="_blank" rel="noopener noreferrer">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-<main>
-    <h2>Education</h2>
-    <p class="intro-paragraph">
-        My academic journey has been a rewarding experience, shaping my interest in tackling environmental challenges and developing sustainable solutions. I am committed to lifelong learning and eager to grow through research and collaboration with like-minded experts.
-    </p>
+    <main>
+        <h2>Education</h2>
+        <p class="intro-paragraph">
+            My academic journey has been a rewarding experience, shaping my interest in tackling environmental
+            challenges and developing sustainable solutions. I am committed to lifelong learning and eager to grow
+            through research and collaboration with like-minded experts.
+        </p>
 
-    <div class="separator-line"></div>
+        <div class="separator-line"></div>
 
-    <div class="education-section">
-        <div class="university-info">
-            <div class="degree-info">MS - Environmental Sciences (2021 – 2024)</div>
-            <img src="NUST.jpeg" alt="National University of Sciences and Technology (NUST)">
-            <h3 class="university-name">
-                <a href="https://www.nust.edu.pk/" target="_blank">National University of Sciences and Technology (NUST)</a>
-            </h3>
+        <div class="education-section">
+            <div class="university-info">
+                <div class="degree-info">MS - Environmental Sciences (2021 – 2024)</div>
+                <img src="NUST.jpeg" alt="National University of Sciences and Technology (NUST)">
+                <h3 class="university-name">
+                    <a href="https://www.nust.edu.pk/" target="_blank">National University of Sciences and Technology
+                        (NUST)</a>
+                </h3>
+            </div>
+            <div class="major-courses">
+                <h3>Major Courses (MS)</h3>
+                <ul>
+                    <li>Climate Change Adaptation and Environment</li>
+                    <li>Carbon Sequestration</li>
+                    <li>Energy and Environment</li>
+                    <li>Research Methodologies in Environmental Science</li>
+                </ul>
+            </div>
         </div>
-        <div class="major-courses">
-            <h3>Major Courses (MS)</h3>
-            <ul>
-                <li>Climate Change Adaptation and Environment</li>
-                <li>Carbon Sequestration</li>
-                <li>Energy and Environment</li>
-                <li>Research Methodologies in Environmental Science</li>
-            </ul>
+
+        <div class="separator-line"></div>
+
+        <div class="education-section">
+            <div class="university-info">
+                <div class="degree-info">BS (Honors) - Environmental Sciences (2016 – 2020)</div>
+                <img src="QAU.jpg" alt="Quaid-i-Azam University (QAU)">
+                <h3 class="university-name">
+                    <a href="https://www.qau.edu.pk/" target="_blank">Quaid-i-Azam University (QAU)</a>
+                </h3>
+            </div>
+            <div class="major-courses">
+                <h3>Major Courses (BS)</h3>
+                <ul>
+                    <li>GIS and Remote Sensing</li>
+                    <li>Environmental Pollution</li>
+                    <li>Earth Sciences</li>
+                    <li>Biodiversity Conservation</li>
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <div class="separator-line"></div>
+        <div class="separator-line"></div>
+    </main>
+    <footer>
+        <p>© 2024 Sana Zarwania. All rights reserved.</p>
+        <p>Built with HTML, CSS, and JavaScript.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/sana-zarwania-9a5429192" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-linkedin"></i></a>
+            </a>
+            <a href="mailto:iamsanazarwania@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href=" https://orcid.org/0009-0005-2085-389X" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-orcid"></i>
+            </a>
 
-    <div class="education-section">
-        <div class="university-info">
-            <div class="degree-info">BS (Honors) - Environmental Sciences (2016 – 2020)</div>
-            <img src="QAU.jpg" alt="Quaid-i-Azam University (QAU)">
-            <h3 class="university-name">
-                <a href="https://www.qau.edu.pk/" target="_blank">Quaid-i-Azam University (QAU)</a>
-            </h3>
         </div>
-        <div class="major-courses">
-            <h3>Major Courses (BS)</h3>
-            <ul>
-                <li>GIS and Remote Sensing</li>
-                <li>Environmental Pollution</li>
-                <li>Earth Sciences</li>
-                <li>Biodiversity Conservation</li>
-            </ul>
-        </div>
-    </div>
+    </footer>
 
-    <div class="separator-line"></div>
-</main>
-<footer>
-    <p>© 2024 Sana Zarwania. All rights reserved.</p>
-    <p>Built with HTML, CSS, and JavaScript.</p>
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/sana-zarwania-9a5429192" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-    </a>
-    <a href="mailto:iamsanazarwania@gmail.com" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-envelope"></i>
-    </a>
-    <a href=" https://orcid.org/0009-0005-2085-389X" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i>
-    </a>
-    
-    </div>
-</footer>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
 
-<script>
-    const menuIcon = document.getElementById('menu-icon');
-    const navLinks = document.getElementById('nav-links');
+        menuIcon.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevents click from propagating to the body
+            navLinks.classList.toggle('active');
+        });
 
-    menuIcon.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevents click from propagating to the body
-        navLinks.classList.toggle('active');
-    });
-
-    document.addEventListener('click', (event) => {
-        if (navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-        }
-    });
-</script>
-<!-- 
+        document.addEventListener('click', (event) => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+    <!-- 
 <script>
     const menuIcon = document.getElementById('menu-icon');
     const navLinks = document.getElementById('nav-links');
@@ -370,4 +418,5 @@ nav ul li a:hover {
 
 
 </body>
+
 </html>

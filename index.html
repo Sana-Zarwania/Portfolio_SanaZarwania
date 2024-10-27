@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,8 @@
             box-sizing: border-box;
         }
 
-        html, body {
+        html,
+        body {
             overflow-x: hidden;
             width: 100%;
             background-color: white;
@@ -60,33 +62,34 @@
             color: white;
             font-size: 1rem;
         }
+
         nav ul li a:hover {
-    color: #33f708; /* Hover effect */
-}
-
-
-    
+            color: #33f708;
+            /* Hover effect */
+        }
 
         /* Intro Section Styles */
 
-.profile-Pick img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        .profile-Pick img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
         .intro-section {
             display: flex;
             flex-wrap: wrap;
             height: auto;
             min-height: calc(100vh - 80px);
-            padding: 40px 20px; /* Increased padding for spacing */
+            padding: 40px 20px;
+            /* Increased padding for spacing */
             gap: 20px;
             align-items: center;
         }
 
-        .intro-text, .profile-Pick {
+        .intro-text,
+        .profile-Pick {
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -95,7 +98,7 @@
         }
 
         .intro-text h1 {
-            color: #ac630f;
+            color: brown;
             font-size: 2rem;
             text-align: center;
             margin-bottom: 10px;
@@ -109,10 +112,14 @@
             text-align: center;
         }
 
+         /* Profile Picture Style */
+
         .profile-Pick img {
             max-width: 100%;
             height: auto;
         }
+
+         /* Quote Style */
 
         blockquote.quote {
             margin: 20px auto;
@@ -120,13 +127,16 @@
             font-style: italic;
             color: #157A6E;
             background-color: rgba(0, 0, 0, 0.05);
-            border-left: 4px solid  #135e55;
+            border-left: 4px solid #135e55;
             max-width: 600px;
             text-align: center;
         }
         .quoteAuthor {
-            color:#ac630f;
+            color: rgb(9, 105, 105);
+            ;
         }
+
+         /* Button Style */
 
         .button {
             margin-top: 20px;
@@ -135,28 +145,33 @@
             gap: 15px;
             flex-wrap: wrap;
         }
+
         .btn {
-    background-color: #135e55;
-    color: white;
-    padding: 15px 30px;
-    font-size: 16px;
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Ensure it's treated as a block-like element */
-    text-align: center;
-}
+            background-color: brown;
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            /* Remove underline */
+            display: inline-block;
+            /* Ensure it's treated as a block-like element */
+            text-align: center;
+        }
 
-.btn:hover {
-    background-color: #157A6E;
-}
+        .btn:hover {
+            background-color: #157A6E;
+        }
 
-        /* Testimonials Section */
+        /* Testimonials Styles */
+
         .testimonials {
-            padding: 60px 20px; /* Increased padding for space */
-            background-color: #47867f;
+            padding: 60px 20px;
+            /* Increased padding for space */
+            background-color: rgb(9, 105, 105);
             color: white;
             text-align: center;
         }
@@ -164,12 +179,13 @@
         .testimonials h2 {
             font-size: 2rem;
             margin-bottom: 30px;
+            color: white;
         }
 
         .testimonial {
             margin: 20px auto;
             max-width: 600px;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: #157A6E;
             padding: 20px;
             border-radius: 10px;
             font-style: italic;
@@ -179,7 +195,8 @@
             display: block;
             margin-top: 10px;
             font-size: 1rem;
-            color: #cee7e6;
+            color: #6bb8b5;
+            font-weight: bold
         }
 
         /* Footer Styles */
@@ -212,11 +229,13 @@
 
             nav {
                 justify-content: center;
-                height: 60px ;
+                height: 60px;
             }
+
             nav.left {
-        font-size: 2rem; /* Reduce the size of text "Contact" to 2rem on mobile phones*/
-    }
+                font-size: 2rem;
+                /* Reduce the size of text "Contact" to 2rem on mobile phones*/
+            }
 
             .menu-icon {
                 display: block;
@@ -224,22 +243,30 @@
                 left: 10px;
                 font-size: 1.5rem;
             }
+
             nav ul {
-        display: none; /* Hidden initially */
-        flex-direction: column; /* Stack items vertically */
-        position: absolute;
-        top: 60px;/* Adjusted to match nav height */
-        left: 0;
-        width: 50%; 
-        height: 50vh;
-        gap: 15px;
-        background-color: #4e917c; /* Mobile background color */
-        color:white;
-        align-items: flex-start; /* Aligns items to the left */
-        padding-left: 20px; /* Add padding for spacing from the left */
-        z-index: 1000; /* Ensure it overlays content */
-    }
-           
+                display: none;
+                /* Hidden initially */
+                flex-direction: column;
+                /* Stack items vertically */
+                position: absolute;
+                top: 60px;
+                /* Adjusted to match nav height */
+                left: 0;
+                width: 50%;
+                height: 50vh;
+                gap: 15px;
+                background-color: #4e917c;
+                /* Mobile background color */
+                color: white;
+                align-items: flex-start;
+                /* Aligns items to the left */
+                padding-left: 20px;
+                /* Add padding for spacing from the left */
+                z-index: 1000;
+                /* Ensure it overlays content */
+            }
+
             nav ul.active {
                 display: flex;
             }
@@ -252,20 +279,21 @@
                 flex-direction: column;
                 padding: 20px;
             }
+
             .intro-text h1 {
                 font-size: 1.5rem;
+                color: #135e55;
             }
+
             .intro-text P {
                 font-size: 1rem;
             }
 
-
-           
-         .profile-Pick img {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%; /* Circular shape */
-            
+            .profile-Pick img {
+                width: 180px;
+                height: 180px;
+                border-radius: 50%;
+                /* Circular shape */
             }
 
             .testimonials {
@@ -286,6 +314,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -296,11 +325,11 @@
                 <li><a href="About.html" target="_blank" rel="noopener noreferrer">About</a></li>
                 <li><a href="Experience.html" target="_blank" rel="noopener noreferrer">Experience</a></li>
                 <li><a href="Services.html" target="_blank" rel="noopener noreferrer">Services</a></li>
-                <li><a href="Contact.html" target="_blank" rel="noopener noreferrer">Contact</a></li> 
+                <li><a href="Contact.html" target="_blank" rel="noopener noreferrer">Contact</a></li>
             </ul>
         </nav>
     </header>
-   
+
 
     <section class="intro-section" id="home">
 
@@ -311,23 +340,27 @@
         <div class="intro-text">
             <h1>Hi there!</h1>
             <p>
-                I am Sana Zarwania, an environmental scientist passionate about addressing real-world environmental challenges.  
-                With expertise in Geographic Information Systems (GIS), I am passionate about conducting solution-oriented research that drives sustainable development.
+                I am Sana Zarwania, an environmental scientist passionate about addressing real-world environmental
+                challenges.
+                With expertise in Geographic Information Systems (GIS), I am passionate about conducting
+                solution-oriented research that drives sustainable development.
             </p>
 
             <blockquote class="quote">
-                <p>"The notion that the earth is our mother, and that we are responsible for caring for her, is the key to a sustainable future."</p>
+                <p>"The notion that the earth is our mother, and that we are responsible for caring for her, is the key
+                    to a sustainable future."</p>
                 <span class="quoteAuthor" style="font-weight: bold;">– Rachel Carson</span>
-           
+
             </blockquote>
 
             <div class="button">
                 <a href="Academic_CV_2024.pdf" class="btn" download>Download Resume</a>
-                <a href="https://www.linkedin.com/in/sana-zarwania-9a5429192" class="btn" target="_blank" rel="noopener noreferrer">Visit LinkedIn</a>
+                <a href="https://www.linkedin.com/in/sana-zarwania-9a5429192" class="btn" target="_blank"
+                    rel="noopener noreferrer">Visit LinkedIn</a>
             </div>
         </div>
 
-       
+
     </section>
 
     <section class="testimonials">
@@ -346,37 +379,29 @@
         <p>© 2024 Sana Zarwania. All rights reserved.</p>
         <p>Built with HTML, CSS, and JavaScript.</p>
         <div class="social-icons">
-            <a href="https://www.linkedin.com/in/sana-zarwania-9a5429192" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/sana-zarwania-9a5429192" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
             <a href="mailto:iamsanazarwania@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
             <a href="https://orcid.org/0009-0005-2085-389X" target="_blank"><i class="fab fa-orcid"></i></a>
         </div>
     </footer>
 
     <script>
-    const menuIcon = document.getElementById('menu-icon');
-    const navLinks = document.getElementById('nav-links');
-
-    menuIcon.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevents click from propagating to the body
-        navLinks.classList.toggle('active');
-    });
-
-    document.addEventListener('click', (event) => {
-        if (navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-        }
-    });
-</script>
-
-<!--         
         const menuIcon = document.getElementById('menu-icon');
         const navLinks = document.getElementById('nav-links');
 
-        menuIcon.addEventListener('click', () => {
+        menuIcon.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevents click from propagating to the body
             navLinks.classList.toggle('active');
         });
-    </script> -->
-</body>
-</html>
 
-           
+        document.addEventListener('click', (event) => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

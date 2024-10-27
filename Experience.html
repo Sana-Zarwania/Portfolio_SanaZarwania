@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-         /* General Styles */
+        /* General Styles */
         * {
             margin: 0;
             padding: 0;
@@ -17,102 +18,118 @@
             font-family: 'Poppins', 'Times New Roman', Times, serif;
             transition: all 0.3s ease;
         }
+
         body {
-    margin: 0;
-    padding: 0;
-    background-color: #e9f5f0;
-    color: #2f4858;
-    line-height: 1.8;
-}
+            margin: 0;
+            padding: 0;
+            background-color: #e9f5f0;
+            color: #2f4858;
+            line-height: 1.8;
+        }
 
-/* Header styles */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    background-color: #157A6E;
-    padding: 0 20px;
-    width: 100%;  /* Ensure full width */
-    max-width: 100vw; /* Prevent overflow beyond the viewport */
-}
+        /* Header styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            background-color: #157A6E;
+            padding: 0 20px;
+            width: 100%;
+            /* Ensure full width */
+            max-width: 100vw;
+            /* Prevent overflow beyond the viewport */
+        }
 
-.menu-icon {
-    display: none;
-    font-size: 1.8rem;
-    color: white;
-    cursor: pointer;
-}
+        .menu-icon {
+            display: none;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+        }
 
-nav .left {
-    font-size: 2.5rem;
-    color: white;
-}
+        nav .left {
+            font-size: 2.5rem;
+            color: white;
+        }
 
-nav ul {
-    display: flex;
-    align-items: center;
-}
+        nav ul {
+            display: flex;
+            align-items: center;
+        }
 
-nav ul li {
-    list-style: none;
-    margin: 0 20px;
-}
+        nav ul li {
+            list-style: none;
+            margin: 0 20px;
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-}
-nav ul li a:hover {
-    color: #33f708; /* Hover effect */
-}
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
 
-
-@media (max-width: 768px) {
-    nav {
-        justify-content: center;
-        height: 60px ;
-    }
-    nav.left {
-        font-size: 2rem; /* Reduce the size of text "Contact" to 2rem on mobile phones*/
-    }
-    nav ul {
-        display: none; /* Hidden initially */
-        flex-direction: column; /* Stack items vertically */
-        position: absolute;
-        top: 60px;/* Adjusted to match nav height */
-        left: 0;
-        width: 50%; 
-        height: 50vh;
-        gap: 15px;
-        background-color: #4e917c; /* Mobile background color */
-        color:white;
-        align-items: flex-start; /* Aligns items to the left */
-        padding-left: 20px; /* Add padding for spacing from the left */
-        z-index: 1000; /* Ensure it overlays content */
-    }
+        nav ul li a:hover {
+            color: #33f708;
+            /* Hover effect */
+        }
 
 
-    nav ul.active {
-        display: flex;
-    }
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center;
+                height: 60px;
+            }
 
-    .menu-icon {
-        display: block;
-        position: absolute;
-        left: 10px;
-        font-size: 1.5rem;
+            nav.left {
+                font-size: 2rem;
+                /* Reduce the size of text "Contact" to 2rem on mobile phones*/
+            }
 
-    }
-    nav ul li {
+            nav ul {
+                display: none;
+                /* Hidden initially */
+                flex-direction: column;
+                /* Stack items vertically */
+                position: absolute;
+                top: 60px;
+                /* Adjusted to match nav height */
+                left: 0;
+                width: 50%;
+                height: 50vh;
+                gap: 15px;
+                background-color: #4e917c;
+                /* Mobile background color */
+                color: white;
+                align-items: flex-start;
+                /* Aligns items to the left */
+                padding-left: 20px;
+                /* Add padding for spacing from the left */
+                z-index: 1000;
+                /* Ensure it overlays content */
+            }
+
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+                position: absolute;
+                left: 10px;
+                font-size: 1.5rem;
+
+            }
+
+            nav ul li {
                 margin: 10px 0;
             }
 
-}
+        }
 
 
-/* Main Section style */
+        /* Main Section style */
         .section {
             position: relative;
             padding: 50px 20px;
@@ -120,7 +137,8 @@ nav ul li a:hover {
             background-size: cover;
             background-position: center;
             margin-bottom: 30px;
-            opacity: 0; /* Initially hidden */
+            opacity: 0;
+            /* Initially hidden */
         }
 
         .text-box {
@@ -135,39 +153,64 @@ nav ul li a:hover {
         .ms-research {
             background-image: url(CRB.jpg);
             animation: slideInFromLeft 2s forwards;
-            animation-delay: 0.4s; /* Start immediately */
+            animation-delay: 0.4s;
+            /* Start immediately */
         }
+
         .climate-change {
             background-image: url(Climate_Change.jpg);
             animation: slideInFromRight 2s forwards;
-            animation-delay: 2s; /* Appear after 4 seconds */
+            animation-delay: 2s;
+            /* Appear after 4 seconds */
         }
 
         .wwf-section {
             background-image: url(Forest.jpg);
             animation: slideInFromLeft 2s forwards;
-            animation-delay: 3s; /* Appear after 2 seconds */
+            animation-delay: 3s;
+            /* Appear after 2 seconds */
         }
+
         .nyccc {
             background-image: url(NYCC_img.jpg);
             animation: slideInFromRight 2s forwards;
-            animation-delay: 4s; /* Appear after 6 seconds */
+            animation-delay: 4s;
+            /* Appear after 6 seconds */
         }
 
         /* Keyframes for animations */
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes slideInFromLeft {
-            0% { transform: translateX(-100%); opacity: 0; }
-            100% { transform: translateX(0); opacity: 1; }
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
         @keyframes slideInFromRight {
-            0% { transform: translateX(100%); opacity: 0; }
-            100% { transform: translateX(0); opacity: 1; }
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
         @media (max-width: 768px) {
@@ -176,11 +219,12 @@ nav ul li a:hover {
             }
 
         }
-
+         /* Footer Style */
 
         footer {
             background-color: #CEE7E6;
-            color: #157A6E; /* Changed from previous color */
+            color: #157A6E;
+            /* Changed from previous color */
             padding: 20px 0;
             text-align: center;
             width: 100%;
@@ -193,17 +237,19 @@ nav ul li a:hover {
 
         footer .social-icons a {
             margin: 0 10px;
-            color: #157A6E; /* Keeping the color for social icons */
+            color: #157A6E;
+            /* Keeping the color for social icons */
             font-size: 1.5rem;
             text-decoration: none;
         }
 
         footer .social-icons a:hover {
-            color: #0f463f; /* Keeping the hover color for social icons */
+            color: #0f463f;
+            /* Keeping the hover color for social icons */
         }
-
     </style>
 </head>
+
 <body>
 
     <header>
@@ -215,76 +261,89 @@ nav ul li a:hover {
                 <li><a href="About.html" target="_blank" rel="noopener noreferrer">About</a></li>
                 <li><a href="Experience.html" target="_blank" rel="noopener noreferrer">Experience</a></li>
                 <li><a href="Services.html" target="_blank" rel="noopener noreferrer">Services</a></li>
-                <li><a href="Contact.html" target="_blank" rel="noopener noreferrer">Contact</a></li>  
+                <li><a href="Contact.html" target="_blank" rel="noopener noreferrer">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-<main>
-    <section class="section ms-research">
-        <div class="text-box">
-            <h2>MS Research</h2>
-            <p>Quantification of Agricultural Emission: A Comprehensive Emission Inventory of Crop Residue Open Burning in Pakistan (2010-2021). This study presents an extensive emission inventory of major air pollutants resulting from crop residue burning in Pakistan over a 12-year period, addressing the critical need for accurate air quality data. Utilizing MODIS active fire data combined with district-level crop production statistics, the research achieved high-resolution spatial and temporal distribution of emissions.</p>
+    <main>
+        <section class="section ms-research">
+            <div class="text-box">
+                <h2>MS Research</h2>
+                <p>Quantification of Agricultural Emission: A Comprehensive Emission Inventory of Crop Residue Open
+                    Burning in Pakistan (2010-2021). This study presents an extensive emission inventory of major air
+                    pollutants resulting from crop residue burning in Pakistan over a 12-year period, addressing the
+                    critical need for accurate air quality data. Utilizing MODIS active fire data combined with
+                    district-level crop production statistics, the research achieved high-resolution spatial and
+                    temporal distribution of emissions.</p>
+            </div>
+        </section>
+
+        <section class="section climate-change">
+            <div class="text-box">
+                <h2>Voluntary Campaign - Ministry of Climate Change</h2>
+                <p><strong>February 2018 – April 2018</strong></p>
+                <p>This voluntary campaign provided me with the opportunity to contribute to environmental awareness
+                    initiatives. I learned the significance of grassroots efforts in mobilizing community action towards
+                    climate resilience.</p>
+            </div>
+        </section>
+
+        <section class="section wwf-section">
+            <div class="text-box">
+                <h2>Eco Internship - WWF (World Wildlife Fund)</h2>
+                <p><strong>July 2018 – August 2018</strong></p>
+                <p>During my internship at WWF, I gained insights into environmental conservation and the importance of
+                    effective waste management. I learned how teamwork and collaboration can drive impactful solutions
+                    to pressing ecological challenges.</p>
+            </div>
+        </section>
+
+
+
+        <section class="section nyccc">
+            <div class="text-box">
+                <h2>Climate Action Fellowship - NYCCC</h2>
+                <p><strong>July 2024 – September 2024</strong></p>
+                <p>Through the Climate Action Fellowship, I deepened my understanding of climate change issues and
+                    developed skills in climate planning and policy development, working collaboratively to propose
+                    actionable solutions for environmental challenges.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Sana Zarwania. All rights reserved.</p>
+        <p>Built with HTML, CSS, and JavaScript.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/sana-zarwania-9a5429192" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-linkedin"></i></a>
+            </a>
+            <a href="mailto:iamsanazarwania@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href=" https://orcid.org/0009-0005-2085-389X" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-orcid"></i>
+            </a>
+
         </div>
-    </section>
+    </footer>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
 
-    <section class="section climate-change">
-        <div class="text-box">
-            <h2>Voluntary Campaign - Ministry of Climate Change</h2>
-            <p><strong>February 2018 – April 2018</strong></p>
-            <p>This voluntary campaign provided me with the opportunity to contribute to environmental awareness initiatives. I learned the significance of grassroots efforts in mobilizing community action towards climate resilience.</p>
-        </div>
-    </section>
+        menuIcon.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevents click from propagating to the body
+            navLinks.classList.toggle('active');
+        });
 
-    <section class="section wwf-section">
-        <div class="text-box">
-            <h2>Eco Internship - WWF (World Wildlife Fund)</h2>
-            <p><strong>July 2018 – August 2018</strong></p>
-            <p>During my internship at WWF, I gained insights into environmental conservation and the importance of effective waste management. I learned how teamwork and collaboration can drive impactful solutions to pressing ecological challenges.</p>
-        </div>
-    </section>
-
-    
-
-    <section class="section nyccc">
-        <div class="text-box">
-            <h2>Climate Action Fellowship - NYCCC</h2>
-            <p><strong>July 2024 – September 2024</strong></p>
-            <p>Through the Climate Action Fellowship, I deepened my understanding of climate change issues and developed skills in climate planning and policy development, working collaboratively to propose actionable solutions for environmental challenges.</p>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <p>© 2024 Sana Zarwania. All rights reserved.</p>
-    <p>Built with HTML, CSS, and JavaScript.</p>
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/sana-zarwania-9a5429192" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-    </a>
-    <a href="mailto:iamsanazarwania@gmail.com" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-envelope"></i>
-    </a>
-    <a href=" https://orcid.org/0009-0005-2085-389X" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i>
-    </a>
-    
-    </div>
-</footer>
-<script>
-    const menuIcon = document.getElementById('menu-icon');
-    const navLinks = document.getElementById('nav-links');
-
-    menuIcon.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevents click from propagating to the body
-        navLinks.classList.toggle('active');
-    });
-
-    document.addEventListener('click', (event) => {
-        if (navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-        }
-    });
-</script>
-<!-- 
+        document.addEventListener('click', (event) => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+    <!-- 
 <script>
     const menuIcon = document.getElementById('menu-icon');
     const navLinks = document.getElementById('nav-links');
@@ -296,4 +355,5 @@ nav ul li a:hover {
 
 
 </body>
+
 </html>

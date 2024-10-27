@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,159 +11,194 @@
 
 
     <style>
-         /* General Styles */
-         * {
+        /* General Styles */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', 'Times New Roman', Times, serif;
         }
+
         body {
-    margin: 0;
-    padding: 0;
-    background-color: #e9f5f0;
-    color: #2f4858;
-    line-height: 1.8;
-}
+            margin: 0;
+            padding: 0;
+            background-color: #e9f5f0;
+            color: #2f4858;
+            line-height: 1.8;
+        }
 
         nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    background-color: #157A6E; /* Changed from #4CAF50 to #157A6E */
-    padding: 0 20px;
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            background-color: #157A6E;
+            /* Changed from #4CAF50 to #157A6E */
+            padding: 0 20px;
+        }
 
-.menu-icon {
-    display: none;
-    font-size: 1.8rem;
-    color: white;
-    cursor: pointer;
-}
+        .menu-icon {
+            display: none;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+        }
 
-nav .left {
-    font-size: 2.5rem;
-    color: white;
-}
+        nav .left {
+            font-size: 2.5rem;
+            color: white;
+        }
 
-nav ul {
-    display: flex;
-    align-items: center;
-    z-index: 1000; /* Ensure it overlays content */
-}
+        nav ul {
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            /* Ensure it overlays content */
+        }
 
-nav ul li {
-    list-style: none;
-    margin: 0 20px;
-}
+        nav ul li {
+            list-style: none;
+            margin: 0 20px;
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-}
-nav ul li a:hover {
-    color: #33f708; /* Hover effect */
-}
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            color: #33f708;
+            /* Hover effect */
+        }
 
 
-@media (max-width: 768px) {
-    nav {
-        justify-content: center;
-        height: 60px ;
-    }
-    nav.left {
-        font-size: 2rem; /* Reduce the size of text "Contact" to 2rem on mobile phones*/
-    }
-    nav ul {
-        display: none; /* Hidden initially */
-        flex-direction: column; /* Stack items vertically */
-        position: absolute;
-        top: 60px;/* Adjusted to match nav height */
-        left: 0;
-        width: 50%; 
-        height: 50vh;
-        gap: 15px;
-        background-color: #4e917c; /* Mobile background color */
-        color:white;
-        align-items: flex-start; /* Aligns items to the left */
-        padding-left: 20px; /* Add padding for spacing from the left */
-        z-index: 1000; /* Ensure it overlays content */
-    }
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center;
+                height: 60px;
+            }
 
-    nav ul.active {
-        display: flex;
-    }
+            nav.left {
+                font-size: 2rem;
+                /* Reduce the size of text "Contact" to 2rem on mobile phones*/
+            }
 
-    .menu-icon {
-        display: block;
-        position: absolute;
-        left: 10px;
-        font-size: 1.5rem;
+            nav ul {
+                display: none;
+                /* Hidden initially */
+                flex-direction: column;
+                /* Stack items vertically */
+                position: absolute;
+                top: 60px;
+                /* Adjusted to match nav height */
+                left: 0;
+                width: 50%;
+                height: 50vh;
+                gap: 15px;
+                background-color: #4e917c;
+                /* Mobile background color */
+                color: white;
+                align-items: flex-start;
+                /* Aligns items to the left */
+                padding-left: 20px;
+                /* Add padding for spacing from the left */
+                z-index: 1000;
+                /* Ensure it overlays content */
+            }
 
-    }
-    nav ul li {
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+                position: absolute;
+                left: 10px;
+                font-size: 1.5rem;
+
+            }
+
+            nav ul li {
                 margin: 10px 0;
             }
 
 
 
-    .contact-container {
-        max-width: 90%; /* Adjust container width for smaller screens */
-    }
-    
-    .contact-info p {
-        font-size: 1rem; /* Adjust font size for smaller devices */
-    }
-}
+            .contact-container {
+                max-width: 90%;
+                /* Adjust container width for smaller screens */
+            }
+
+            .contact-info p {
+                font-size: 1rem;
+                /* Adjust font size for smaller devices */
+            }
+        }
 
         .contact-container {
             background-color: rgba(255, 255, 255, 0.95);
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             padding: 40px;
-            max-width: 800px; /* Increased width */
+            max-width: 800px;
+            /* Increased width */
             width: 100%;
             margin: 20px auto;
             animation: fadeIn 1s ease-in-out;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .contact-info {
             margin-bottom: 20px;
         }
+
         .contact-info p {
-    border: 1px solid #2a7b6f;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0; /* Spacing between bars */
-    font-size: 1.2rem;
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+            border: 1px solid #2a7b6f;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            /* Spacing between bars */
+            font-size: 1.2rem;
+            white-space: nowrap;
+            /* Prevents text from wrapping */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
         .contact-info p a {
-        word-wrap: break-word; /* Allows breaking words if they are too long */
-        word-break: break-word; /* Ensures long words break in small containers */
+            word-wrap: break-word;
+            /* Allows breaking words if they are too long */
+            word-break: break-word;
+            /* Ensures long words break in small containers */
         }
 
 
         .social-icons img {
-            width: 24px; /* Size of your custom icon */
-            height: 24px; /* Size of your custom icon */
-            vertical-align: middle; /* Aligns the icon with text */
+            width: 24px;
+            /* Size of your custom icon */
+            height: 24px;
+            /* Size of your custom icon */
+            vertical-align: middle;
+            /* Aligns the icon with text */
         }
 
-        
+
         footer {
             background-color: #CEE7E6;
-            color: #157A6E; /* Changed from previous color */
+            color: #157A6E;
+            /* Changed from previous color */
             padding: 20px 0;
             text-align: center;
             width: 100%;
@@ -175,16 +211,19 @@ nav ul li a:hover {
 
         footer .social-icons a {
             margin: 0 10px;
-            color: #157A6E; /* Keeping the color for social icons */
+            color: #157A6E;
+            /* Keeping the color for social icons */
             font-size: 1.5rem;
             text-decoration: none;
         }
 
         footer .social-icons a:hover {
-            color: #0f463f; /* Keeping the hover color for social icons */
+            color: #0f463f;
+            /* Keeping the hover color for social icons */
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -196,53 +235,59 @@ nav ul li a:hover {
                 <li><a href="About.html" target="_blank" rel="noopener noreferrer">About</a></li>
                 <li><a href="Experience.html" target="_blank" rel="noopener noreferrer">Experience</a></li>
                 <li><a href="Services.html" target="_blank" rel="noopener noreferrer">Services</a></li>
-                <li><a href="Contact.html" target="_blank" rel="noopener noreferrer">Contact</a></li>  
+                <li><a href="Contact.html" target="_blank" rel="noopener noreferrer">Contact</a></li>
             </ul>
-           
+
         </nav>
     </header>
 
 
-<main>
-    <div class="contact-container">
-        <div class="contact-info">
-            <p>Email: <a href="mailto:iamsanazarwania@gmail.com" style="color: #2a7b6f;">iamsanazarwania@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/sana-zarwania-9a5429192" target="_blank" rel="noopener noreferrer" style="color: #2a7b6f;">sana zarwania</a></p>
-            <p>GitHub <a href="https://github.com/Sana-Zarwania" target="_blank" rel="noopener noreferrer" style="color: #2a7b6f;"> Sana-Zarwania</a></p>
-            <p>Orcid: <a href="https://orcid.org/yourorcid" target="_blank" rel="noopener noreferrer" style="color: #2a7b6f;">SANA ZARWANIA</a></p>
+    <main>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>Email: <a href="mailto:iamsanazarwania@gmail.com"
+                        style="color: #2a7b6f;">iamsanazarwania@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/sana-zarwania-9a5429192" target="_blank"
+                        rel="noopener noreferrer" style="color: #2a7b6f;">sana zarwania</a></p>
+                <p>GitHub <a href="https://github.com/Sana-Zarwania" target="_blank" rel="noopener noreferrer"
+                        style="color: #2a7b6f;"> Sana-Zarwania</a></p>
+                <p>Orcid: <a href="https://orcid.org/yourorcid" target="_blank" rel="noopener noreferrer"
+                        style="color: #2a7b6f;">SANA ZARWANIA</a></p>
+            </div>
         </div>
-    </div>
-</main>
-<footer>
-    <p>© 2024 Sana Zarwania. All rights reserved.</p>
-    <p>Built with HTML, CSS, and JavaScript.</p>
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/sana-zarwania-9a5429192" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-    </a>
-    <a href="mailto:iamsanazarwania@gmail.com" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-envelope"></i>
-    </a>
-    <a href=" https://orcid.org/0009-0005-2085-389X" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i>
-    </a>
-    
-    </div>
-</footer>
-<script>
-    const menuIcon = document.getElementById('menu-icon');
-    const navLinks = document.getElementById('nav-links');
+    </main>
+    <footer>
+        <p>© 2024 Sana Zarwania. All rights reserved.</p>
+        <p>Built with HTML, CSS, and JavaScript.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/sana-zarwania-9a5429192" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-linkedin"></i></a>
+            </a>
+            <a href="mailto:iamsanazarwania@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href=" https://orcid.org/0009-0005-2085-389X" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-orcid"></i>
+            </a>
 
-    menuIcon.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevents click from propagating to the body
-        navLinks.classList.toggle('active');
-    });
+        </div>
+    </footer>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
 
-    document.addEventListener('click', (event) => {
-        if (navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-        }
-    });
-</script>
-<!-- 
+        menuIcon.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevents click from propagating to the body
+            navLinks.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+    <!-- 
 <script>
     const menuIcon = document.getElementById('menu-icon');
     const navLinks = document.getElementById('nav-links');
@@ -254,4 +299,5 @@ nav ul li a:hover {
 
 
 </body>
+
 </html>

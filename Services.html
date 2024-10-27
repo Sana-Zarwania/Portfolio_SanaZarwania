@@ -1,209 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
-    
+
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <style>
-         
-
         /* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', 'Times New Roman', Times, serif;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Times New Roman', Times, serif;
+        }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #e9f5f0;
-    color: #2f4858;
-    line-height: 1.8;
-    scroll-behavior: smooth; /* Smooth scrolling */
-}
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e9f5f0;
+            color: #2f4858;
+            line-height: 1.8;
+            scroll-behavior: smooth;
+            /* Smooth scrolling */
+        }
 
-/* Header Styles */
-header {
-    margin-bottom: 40px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow under header */
-}
+        /* Header Styles */
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    background-color: #157A6E;
-    padding: 0 20px;
-    width: 100%;
-    max-width: 100vw;
-    transition: background-color 0.3s ease-in-out; /* Smooth background change */
-}
+        header {
+            margin-bottom: 40px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow under header */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            background-color: #157A6E;
+            padding: 0 20px;
+            width: 100%;
+            max-width: 100vw;
+            transition: background-color 0.3s ease-in-out;
+            /* Smooth background change */
+        }
 
 
-.menu-icon {
-    display: none;
-    font-size: 1.8rem;
-    color: white;
-    cursor: pointer;
-}
-   
-nav .left {
-    font-size: 2.5rem;
-    color: white;
-}
+        .menu-icon {
+            display: none;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+        }
 
-nav ul {
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease-in-out; /* Smooth menu appearance */
-}
+        nav .left {
+            font-size: 2.5rem;
+            color: white;
+        }
 
-nav ul li {
-    list-style: none;
-    margin: 0 20px;
-}
+        nav ul {
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+            /* Smooth menu appearance */
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    position: relative;
-    transition: color 0.3s ease; /* Smooth color change on hover */
-}
-nav ul li a:hover {
-    color: #33f708; /* Hover effect */
-}
+        nav ul li {
+            list-style: none;
+            margin: 0 20px;
+        }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-    nav {
-        justify-content: center;
-        height: 60px ;
-    }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            position: relative;
+            transition: color 0.3s ease;
+            /* Smooth color change on hover */
+        }
 
-    nav.left {
-        font-size: 2rem; /* Reduce the size of text "Contact" to 2rem on mobile phones*/
-    }
-    nav ul {
-        display: none; /* Hidden initially */
-        flex-direction: column; /* Stack items vertically */
-        position: absolute;
-        top: 60px;/* Adjusted to match nav height */
-        left: 0;
-        width: 50%; 
-        height: 50vh;
-        gap: 15px;
-        background-color: #4e917c; /* Mobile background color */
-        color:white;
-        align-items: flex-start; /* Aligns items to the left */
-        padding-left: 20px; /* Add padding for spacing from the left */
-        z-index: 1000; /* Ensure it overlays content */
-    }
-      
-    nav ul.active {
-        display: flex;
-    }
+        nav ul li a:hover {
+            color: #33f708;
+            /* Hover effect */
+        }
 
-    .menu-icon {
-        display: block;
-        position: absolute;
-        left: 10px;
-        font-size: 1.5rem;
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center;
+                height: 60px;
+            }
 
-    }
-    nav ul li {
+            nav.left {
+                font-size: 2rem;
+                /* Reduce the size of text "Contact" to 2rem on mobile phones*/
+            }
+
+            nav ul {
+                display: none;
+                /* Hidden initially */
+                flex-direction: column;
+                /* Stack items vertically */
+                position: absolute;
+                top: 60px;
+                /* Adjusted to match nav height */
+                left: 0;
+                width: 50%;
+                height: 50vh;
+                gap: 15px;
+                background-color: #4e917c;
+                /* Mobile background color */
+                color: white;
+                align-items: flex-start;
+                /* Aligns items to the left */
+                padding-left: 20px;
+                /* Add padding for spacing from the left */
+                z-index: 1000;
+                /* Ensure it overlays content */
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+                position: absolute;
+                left: 10px;
+                font-size: 1.5rem;
+
+            }
+
+            nav ul li {
                 margin: 10px 0;
             }
 
-}
+        }
 
+        /* Service Cards */
 
-/* Service Cards */
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.service {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid #157A6E;
-}
+        .service {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #157A6E;
+        }
 
-.service:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    background-color: #f0fcfa;
-}
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            background-color: #f0fcfa;
+        }
 
-.service h2 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-    color: #2a7b6f;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: color 0.3s ease;
-}
+        .service h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #2a7b6f;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s ease;
+        }
 
-.service h2:hover {
-    color: #157A6E;
-}
+        .service h2:hover {
+            color: #157A6E;
+        }
 
-.service p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #555;
-}
+        .service p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #555;
+        }
 
-/* Footer */
-footer {
-    background-color: #CEE7E6;
-    color: #157A6E;
-    padding: 20px 0;
-    margin-top: 40px;
-    text-align: center;
-    width: 100%;
-    border-top: 2px solid #14a392;
-}
-
-footer p {
-    margin: 5px 0;
-    font-size: 0.8rem;
-}
-
-footer .social-icons a {
-    margin: 0 10px;
-    color: #157A6E;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer .social-icons a:hover {
-    color: #0f463f;
-}
-
+        /* Footer styles */
         
+        footer {
+            background-color: #CEE7E6;
+            color: #157A6E;
+            padding: 20px 0;
+            margin-top: 40px;
+            text-align: center;
+            width: 100%;
+            border-top: 2px solid #14a392;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 0.8rem;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            color: #157A6E;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #0f463f;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -214,84 +231,94 @@ footer .social-icons a:hover {
                 <li><a href="About.html" target="_blank" rel="noopener noreferrer">About</a></li>
                 <li><a href="Experience.html" target="_blank" rel="noopener noreferrer">Experience</a></li>
                 <li><a href="Services.html" target="_blank" rel="noopener noreferrer">Services</a></li>
-                <li><a href="Contact.html" target="_blank" rel="noopener noreferrer">Contact</a></li>  
-            </ul> 
+                <li><a href="Contact.html" target="_blank" rel="noopener noreferrer">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-<main>
-    <div class="services-container">
-        <div class="service">
-            <h2><i class="fas fa-map-marked-alt"></i> Geospatial Data Analysis</h2>
-            <p>Offering expert analysis and processing of geospatial data using ArcGIS software to support research and decision-making.</p>
+    <main>
+        <div class="services-container">
+            <div class="service">
+                <h2><i class="fas fa-map-marked-alt"></i> Geospatial Data Analysis</h2>
+                <p>Offering expert analysis and processing of geospatial data using ArcGIS software to support research
+                    and decision-making.</p>
+            </div>
+
+            <div class="service">
+                <h2><i class="fas fa-satellite"></i> Remote Sensing Expertise</h2>
+                <p>Utilizing advanced remote sensing techniques and spatial analysis through Erdas Imagine to derive
+                    actionable insights.</p>
+            </div>
+
+            <div class="service">
+                <h2><i class="fas fa-chart-line"></i> Environmental Data Analysis</h2>
+                <p>Skilled in environmental data analysis, employing statistical methods to ensure robust and reliable
+                    outcomes.</p>
+            </div>
+
+            <div class="service">
+                <h2><i class="fas fa-pen-fancy"></i> Technical Writing</h2>
+                <p>Providing comprehensive research and technical writing services to effectively communicate complex
+                    information.</p>
+            </div>
+
+            <div class="service">
+                <h2><i class="fas fa-question-circle"></i> Research Design</h2>
+                <p>Experienced in designing and developing research methodologies, including questionnaire creation
+                    tailored to specific studies.</p>
+            </div>
+
+            <div class="service">
+                <h2><i class="fas fa-project-diagram"></i> Project Management</h2>
+                <p>Proficient in project management and collaborative work, ensuring timely delivery and successful
+                    project outcomes.</p>
+            </div>
+
+            <div class="service">
+                <h2><i class="fas fa-code"></i> Web Development</h2>
+                <p>Familiar with web development fundamentals, enabling the creation of user-friendly and informative
+                    online platforms.</p>
+            </div>
+
+            <div class="service">
+                <h2><i class="fas fa-microphone-alt"></i> Public Speaking</h2>
+                <p>Strong public speaking and presentation skills to effectively convey research findings and engage
+                    audiences.</p>
+            </div>
         </div>
+    </main>
+    <footer>
+        <p>© 2024 Sana Zarwania. All rights reserved.</p>
+        <p>Built with HTML, CSS, and JavaScript.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/sana-zarwania-9a5429192" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-linkedin"></i></a>
+            </a>
+            <a href="mailto:iamsanazarwania@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href=" https://orcid.org/0009-0005-2085-389X" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-orcid"></i>
+            </a>
 
-        <div class="service">
-            <h2><i class="fas fa-satellite"></i> Remote Sensing Expertise</h2>
-            <p>Utilizing advanced remote sensing techniques and spatial analysis through Erdas Imagine to derive actionable insights.</p>
         </div>
+    </footer>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
 
-        <div class="service">
-            <h2><i class="fas fa-chart-line"></i> Environmental Data Analysis</h2>
-            <p>Skilled in environmental data analysis, employing statistical methods to ensure robust and reliable outcomes.</p>
-        </div>
+        menuIcon.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevents click from propagating to the body
+            navLinks.classList.toggle('active');
+        });
 
-        <div class="service">
-            <h2><i class="fas fa-pen-fancy"></i> Technical Writing</h2>
-            <p>Providing comprehensive research and technical writing services to effectively communicate complex information.</p>
-        </div>
-
-        <div class="service">
-            <h2><i class="fas fa-question-circle"></i> Research Design</h2>
-            <p>Experienced in designing and developing research methodologies, including questionnaire creation tailored to specific studies.</p>
-        </div>
-
-        <div class="service">
-            <h2><i class="fas fa-project-diagram"></i> Project Management</h2>
-            <p>Proficient in project management and collaborative work, ensuring timely delivery and successful project outcomes.</p>
-        </div>
-
-        <div class="service">
-            <h2><i class="fas fa-code"></i> Web Development</h2>
-            <p>Familiar with web development fundamentals, enabling the creation of user-friendly and informative online platforms.</p>
-        </div>
-
-        <div class="service">
-            <h2><i class="fas fa-microphone-alt"></i> Public Speaking</h2>
-            <p>Strong public speaking and presentation skills to effectively convey research findings and engage audiences.</p>
-        </div>
-    </div>
-</main>
-<footer>
-    <p>© 2024 Sana Zarwania. All rights reserved.</p>
-    <p>Built with HTML, CSS, and JavaScript.</p>
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/sana-zarwania-9a5429192" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-    </a>
-    <a href="mailto:iamsanazarwania@gmail.com" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-envelope"></i>
-    </a>
-    <a href=" https://orcid.org/0009-0005-2085-389X" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i>
-    </a>
-    
-    </div>
-</footer>
-<script>
-    const menuIcon = document.getElementById('menu-icon');
-    const navLinks = document.getElementById('nav-links');
-
-    menuIcon.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevents click from propagating to the body
-        navLinks.classList.toggle('active');
-    });
-
-    document.addEventListener('click', (event) => {
-        if (navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-        }
-    });
-</script>
-<!-- 
+        document.addEventListener('click', (event) => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+    <!-- 
 <script>
     const menuIcon = document.getElementById('menu-icon');
     const navLinks = document.getElementById('nav-links');
@@ -303,4 +330,5 @@ footer .social-icons a:hover {
 
 
 </body>
+
 </html>
