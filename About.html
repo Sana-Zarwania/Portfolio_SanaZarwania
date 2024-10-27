@@ -85,7 +85,8 @@ nav ul li a:hover {
         left: 0;
         width: 50%; 
         height: 50vh;
-        background-color: #93ebcf; /* Mobile background color */
+        gap: 15px;
+        background-color: #4e917c; /* Mobile background color */
         color:white;
         align-items: flex-start; /* Aligns items to the left */
         padding-left: 20px; /* Add padding for spacing from the left */
@@ -201,17 +202,19 @@ nav ul li a:hover {
             color: #ac630f ;
         }
         /* Major Courses Section */
-.major-courses ul {
-    list-style: square inside;  /* Ensures the bullets and text align properly */
-    margin-top: 10px;
-    padding-left: 0;  /* Ensures no additional indentation */
+        .major-courses ul {
+    list-style-position: outside;  /* Bullets stay outside the text area */
+    padding-left: 1.2em;           /* Creates space for the bullet */
 }
 
 .major-courses ul li {
     margin-bottom: 8px;
-    text-indent: -1em;  /* Moves text slightly left to align with the bullets */
-    padding-left: 1em;  /* Shifts text to avoid overlapping with bullet */
+    padding-left: 0.5em;            /* Shifts text to align with bullet */
+    text-indent: -0.5em;            /* Ensures that the second line aligns with the text */
+    line-height: 1.6;               /* Adjusts line spacing for better readability */
+    word-wrap: break-word;          /* Ensures long words break */
 }
+
 
 /* Change Bullet Color */
 .major-courses ul li::marker {
@@ -228,10 +231,6 @@ nav ul li a:hover {
                 gap: 20px;
             }
 
-            nav ul {
-                flex-direction: column;
-                gap: 15px;
-            }
 
             .university-info, .major-courses {
                 width: 100%;

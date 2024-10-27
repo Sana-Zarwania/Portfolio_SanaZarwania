@@ -75,16 +75,16 @@ nav ul li a:hover {
     nav.left {
         font-size: 2rem; /* Reduce the size of text "Contact" to 2rem on mobile phones*/
     }
-
-  nav ul {
+    nav ul {
         display: none; /* Hidden initially */
         flex-direction: column; /* Stack items vertically */
         position: absolute;
-        top: 60px;
+        top: 60px;/* Adjusted to match nav height */
         left: 0;
         width: 50%; 
         height: 50vh;
-        background-color: #93ebcf; /* Mobile background color */
+        gap: 15px;
+        background-color: #4e917c; /* Mobile background color */
         color:white;
         align-items: flex-start; /* Aligns items to the left */
         padding-left: 20px; /* Add padding for spacing from the left */
@@ -106,9 +106,7 @@ nav ul li a:hover {
                 margin: 10px 0;
             }
 
-    nav ul li {
-        margin: 10px 0;
-    }
+
 
     .contact-container {
         max-width: 90%; /* Adjust container width for smaller screens */
