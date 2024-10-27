@@ -82,9 +82,10 @@ nav ul li a:hover {
         position: absolute;
         top: 60px;
         left: 0;
-        width: 60%; 
-        height: 60vh;
-        background-color:#54917c; /* Mobile background color */
+        width: 50%; 
+        height: 50vh;
+        background-color: #93ebcf; /* Mobile background color */
+        color:white;
         align-items: flex-start; /* Aligns items to the left */
         padding-left: 20px; /* Add padding for spacing from the left */
         z-index: 1000; /* Ensure it overlays content */
@@ -102,11 +103,19 @@ nav ul li a:hover {
 
     }
     nav ul li {
-                margin: 20px 0;
+                margin: 10px 0;
             }
 
     nav ul li {
         margin: 10px 0;
+    }
+
+    .contact-container {
+        max-width: 90%; /* Adjust container width for smaller screens */
+    }
+    
+    .contact-info p {
+        font-size: 1rem; /* Adjust font size for smaller devices */
     }
 }
 
@@ -129,14 +138,17 @@ nav ul li a:hover {
         .contact-info {
             margin-bottom: 20px;
         }
-
         .contact-info p {
-            border: 1px solid #2a7b6f;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px 0; /* Spacing between bars */
-            font-size: 1.2rem;
-        }
+    border: 1px solid #2a7b6f;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0; /* Spacing between bars */
+    font-size: 1.2rem;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
         .contact-info p a {
         word-wrap: break-word; /* Allows breaking words if they are too long */
         word-break: break-word; /* Ensures long words break in small containers */
